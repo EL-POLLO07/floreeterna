@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Enchanted Rose by AlexDev</title>
   <link rel="stylesheet" href="./diseñoflor.css">
+<<<<<<< HEAD
 
 </head>
 <body>
@@ -33,6 +34,89 @@
 		<div></div>
 		<div></div>
 	</div>
+=======
+  <style>
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Cambia flex-end por flex-start para mover la flor al oeste */
+    align-items: center;
+    /* Fondo tipo castillo, noche y brillos */
+    background: 
+      radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.7) 70%),
+      linear-gradient(to bottom, #2d1e3a 0%, #0d0d1a 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+  }
+  /* Efecto de luz de ventana */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    opacity: 0.18;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(2px);
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    /* Centra la flor en el viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
+  /* Opcional: brillos de partículas */
+  .sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 2;
+    width: 3px; height: 3px;S
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    animation: sparkle 2s infinite linear;
+  }
+  @keyframes sparkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" style="margin-top: 200px;">
+    <div class="glass">
+    <div class="shine"></div>
+  </div>
+    <div class="thorns">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="leaves">
+        <div></div>
+        <div></div>
+    <div></div>
+    <div></div>
+    </div>
+    <div class="petals">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+>>>>>>> 326f6e0 (actualizacion)
   <div class="deadPetals">
     <div></div>
     <div></div>
@@ -42,6 +126,7 @@
 </div>
 <!-- partial -->
   <div>
+<<<<<<< HEAD
         <h4 class="texto"><p style="color: rgb(174, 37, 99);">Yo te prometo que yo
 Seré quien cuide tus sueños
 Y cuando tú estés despierta
@@ -96,6 +181,43 @@ Que lleva tiempo dormido, pensando que estaba vivo
 Yo te prometo, contigo
 Envejecer❤️</p></h>
     </div>
+=======
+      <h4 class="texto"><p style="color: rgb(174, 37, 99);">  </p></h>
+    </div>
+    <div id="letra-flor-palida" style="position:fixed; top:30px; left:30px; text-align:left; font-size:1.3em; color:#fff; font-family:serif; background:rgba(30,20,40,0.5); padding:16px 24px; border-radius:12px; z-index:10;"></div>
+<script>
+const letraFlorPalida = [
+  { tiempo: 0, texto: "Hallé una flor" },
+  { tiempo: 3, texto: "Un día en el camino" },
+  { tiempo: 6, texto: "Que apareció marchita y deshojada" },
+  { tiempo: 10, texto: "Ya casi pálida, ahogada en un suspiro" },
+  { tiempo: 14, texto: "Me la llevé a mi jardín para cuidarla" },
+  { tiempo: 18, texto: "Aquella flor de pétalos dormidos" },
+  { tiempo: 22, texto: "A la que cuido hoy con todo el alma" },
+  { tiempo: 26, texto: "Recuperó el color que había perdido" },
+  { tiempo: 30, texto: "Porque encontró un cuidador que la regara" },
+  { tiempo: 34, texto: "Le fui poniendo un poquito de amor" },
+  { tiempo: 38, texto: "La fui abrigando en mi alma" },
+  { tiempo: 41, texto: "Y en el invierno le daba calor" },
+  { tiempo: 45, texto: "Para que no se dañara" }
+];
+
+let indiceLetra = 0;
+const divLetra = document.getElementById('letra-flor-palida');
+
+function mostrarLetra() {
+  if (indiceLetra < letraFlorPalida.length) {
+    divLetra.textContent = letraFlorPalida[indiceLetra].texto;
+    setTimeout(mostrarLetra, 
+      (letraFlorPalida[indiceLetra + 1] ? 
+        (letraFlorPalida[indiceLetra + 1].tiempo - letraFlorPalida[indiceLetra].tiempo) : 4) * 1000
+    );
+    indiceLetra++;
+  }
+}
+mostrarLetra();
+</script>
+>>>>>>> 326f6e0 (actualizacion)
 </body>
 
  <!-- 
@@ -103,7 +225,11 @@ Envejecer❤️</p></h>
 Contáctame:
 
     * Invitame un café
+<<<<<<< HEAD
  https://buymeacoffee.com/alexx.dev
+=======
+ https://buymeacoffee.com/alexx.dev     
+>>>>>>> 326f6e0 (actualizacion)
 
     * Sigueme en tiktok
  https://www.tiktok.com/@alexx.dev?is_from_webapp=1&sender_device=pc 
@@ -113,4 +239,17 @@ Contáctame:
 
 -->
  
+<<<<<<< HEAD
+=======
+<script>
+for(let i=0;i<30;i++){
+  const s=document.createElement('div');
+  s.className='sparkle';
+  s.style.top=Math.random()*100+'vh';
+  s.style.left=Math.random()*100+'vw';
+  s.style.animationDelay=(Math.random()*2)+'s';
+  document.body.appendChild(s);
+}
+</script>
+>>>>>>> 326f6e0 (actualizacion)
 </html>
